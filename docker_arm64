@@ -23,6 +23,9 @@ sudo usermod -aG docker $USER
 docker pull ubuntu:17.10
 # check the image is download
 docker images -a
+# show running container
+docker ps
+docker ps -a
 
 
 
