@@ -1,4 +1,4 @@
-# the specific and proved process to setup docker on thunderx2t99
+# the specific and proven process to setup docker on thunderx2t99
 # it derived from https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository
 
 # install
@@ -13,6 +13,18 @@ sudo apt-get install docker-ce
 
 # add yourself to docker user group to avoid using sudo every time
 sudo usermod -aG docker $USER
+
+# docker commands
+--------------------------------------
+# refer to the link for details. https://docs.docker.com/edge/engine/reference/commandline/docker/
+
+# download image from docker hub. 
+# The hosting distro is Ubuntu16.04. I prefer to the latest version.
+docker pull ubuntu:17.10
+# check the image is download
+docker images -a
+
+
 
 
 
