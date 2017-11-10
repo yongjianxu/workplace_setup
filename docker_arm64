@@ -45,8 +45,9 @@ sudo docker export <CONTAINER ID> > /home/export.tar
 docker save -o ubuntu17.10_hpc.tar ubuntu:hpc
 tar cJf ubuntu17.10_hpc.tar.xz ubuntu17.10_hpc.tar
 
-#
-docker run -d -h Borg --name hpc --ip 192.168.1.2 
+# create&run a docker in background, ssh to the docker or attache to the docker
+docker run -d -t -h Borg --name hpc ubuntu:17.10
+ssh 172.17.0.2
 
 
 
