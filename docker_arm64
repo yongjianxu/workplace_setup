@@ -17,6 +17,7 @@ sudo usermod -aG docker $USER
 # docker commands
 --------------------------------------
 # refer to the link for details. https://docs.docker.com/edge/engine/reference/commandline/docker/
+# also refer to the introduction http://tuhrig.de/difference-between-save-and-export-in-docker/
 
 # download image from docker hub. 
 # The hosting distro is Ubuntu16.04. I prefer to the latest version.
@@ -37,6 +38,13 @@ docker cp -aL SRC DEST
 docker commit hpc ubuntu:hpc
 # check the images
 docker images
+# persist the changes
+# docker export is used to persist a container (not an image). So we need the container id which we can see like this
+sudo docker export <CONTAINER ID> > /home/export.tar
+# docker save is used to persist an image (not a container). So we need the image name which we can see like this
+sudo docker save busybox-1 > /home/save.tar
+
+
 
 
 
