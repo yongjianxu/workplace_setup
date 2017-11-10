@@ -23,9 +23,20 @@ sudo usermod -aG docker $USER
 docker pull ubuntu:17.10
 # check the image is download
 docker images -a
+# create a container
+docker create -ti --name hpc -h Borg -u yong ubuntu:17.10
+# start the container and attach to it
+docker start -ai hpc
 # show running container
 docker ps
 docker ps -a
+# cp files between host and docker
+docker cp -aL SRC DEST
+
+# commit your change to the docker image and generate a new tag
+docker commit hpc ubuntu:hpc
+# check the images
+docker images
 
 
 
