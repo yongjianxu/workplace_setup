@@ -45,7 +45,8 @@ sudo docker export <CONTAINER ID> > /home/export.tar
 docker save -o ubuntu17.10_hpc.tar ubuntu:hpc
 tar cJf ubuntu17.10_hpc.tar.xz ubuntu17.10_hpc.tar
 
-
+#
+docker run -d -h Borg --name hpc --ip 192.168.1.2 
 
 
 
