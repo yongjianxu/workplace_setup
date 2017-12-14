@@ -1,9 +1,11 @@
 # 1. CPU MAP SHOW
+# 2. CPU BINDING
 
 
 
 ===================HEAD ABOVE THIS LINE===========================
 #1. CPU MAP SHOW
+-------------------------------------------------------
 # lscpu is the fast way
 yong@sm6148-2s-03:~$ lscpu
 NUMA node0 CPU(s):     0-19,40-59
@@ -38,5 +40,7 @@ node   0   1
   0:  10  21 
   1:  21  10 
 
-
-
+# 2. CPU BINDING
+-------------------------------------------------------
+# run program on socket 0 (cpunode=0,memnode=0)
+numactl -N 0 -m 0
