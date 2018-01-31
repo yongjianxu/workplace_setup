@@ -1,1 +1,12 @@
+###################################################
+Content:
+1. likwid
 
+###################################################
+1. likwid
+===================================================
+1) download the latest 4.3.1 and compile according to the README.md
+   https://github.com/RRZE-HPC/likwid/archive/4.3.1.tar.gz
+2) command:
+  likid-topology, likid-bench -a
+  
