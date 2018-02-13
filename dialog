@@ -2,6 +2,6 @@
 2. pythondialog is a wrapper around dialog. it is faster to develop
 3. install pythondialog on aarch64 processor as the following. (ubuntu16.04LTS)
     1) sudo apt install python3-pip; pip3 install --upgrade pip
-    2) pip3 install pythondialog
+    2) sudo pip3 install pythondialog
 4) install dialog on aarch64 processor
     sudo apt install dialog
