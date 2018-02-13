@@ -1,5 +1,6 @@
 # 1. CPU MAP SHOW
 # 2. CPU BINDING
+# 3. UPDATE KERNEL
 
 
 
@@ -44,3 +45,15 @@ node   0   1
 -------------------------------------------------------
 # run program on socket 0 (cpunode=0,memnode=0)
 numactl -N 0 -m 0
+
+# 3. UPDATE KERNEL
+cp /boot/config
+make olddefconfig
+make -j
+make INSTALL_MOD_STRIP=1 modules_install
+make install
+
+
+
+-------------------------------------------------------
+
