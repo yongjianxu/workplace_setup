@@ -1,6 +1,8 @@
 # 1. CPU MAP SHOW
 # 2. CPU BINDING
 # 3. UPDATE KERNEL
+# 4. compile a missed module
+
 
 
 
@@ -57,3 +59,17 @@ make install
 
 -------------------------------------------------------
 
+# 4. compile a missed module
+sudo apt install linux-source-4.13.0
+cd /usr/src/
+cd /usr/src/
+tar jxf linux-source-4.13.0
+sudo cp ../linux-headers-4.13.0-38-generic/Module.symvers linux-source-4.13.0/
+sudo cp /boot/config-4.13.0-38-generic linux-source-4.13.0/.config
+make menuconfig # enable the setting
+make prepare # setup the setting as module
+make modules_prepare
+sudo make SUBDIRS=drivers/gpu/drm/i915 modules
+sudo make SUBDIRS=drivers/gpu/drm/i915 modules_install
+sudo modprobe i915
+cd 
