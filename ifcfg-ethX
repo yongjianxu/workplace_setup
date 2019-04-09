@@ -1,0 +1,7 @@
+NAME=em1
+DEVICE=em1
+ONBOOT=yes   ---> enable automatically after reboot
+PREFIX=24
+IPADDR=192.178.100.10
+GATEWAY=192.178.100.1  --> default gateway
+DNS1=192.178.100.1  --> nameserver
